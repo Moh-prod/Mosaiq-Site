@@ -1,0 +1,261 @@
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.6rem 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+/* Pack MOSAIQ : carte mise en avant */
+.highlight {
+  border-color: transparent;
+  background:
+    radial-gradient(24rem 16rem at 100% 0%, rgb(228 97 43 / 0.28), transparent 60%),
+    linear-gradient(160deg, var(--indigo-800), var(--indigo-950));
+  box-shadow: var(--shadow-lg);
+  color: #c3c8e8;
+}
+
+.highlight .name,
+.highlight .amount {
+  color: #fff;
+}
+
+.highlight .tagline,
+.highlight .currency {
+  color: #b7bde0;
+}
+
+.highlight .features {
+  border-top-color: rgb(255 255 255 / 0.12);
+}
+
+.highlight .features li {
+  color: #e6e8f7;
+}
+
+.highlight .features svg {
+  background: rgb(242 132 76 / 0.2);
+  color: var(--orange-400);
+}
+
+.highlight .whatsapp {
+  color: #c3c8e8;
+}
+
+.highlight .whatsapp:hover {
+  color: #fff;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: var(--orange-500);
+  box-shadow: 0 8px 18px -8px rgb(228 97 43 / 0.8);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.badge svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.name {
+  font-size: 1.25rem;
+}
+
+.tagline {
+  min-height: 3em;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+}
+
+.amount {
+  font-size: clamp(2.2rem, 1.9rem + 1vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+.currency {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.features {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.features li {
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.features svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  padding: 3px;
+  border-radius: 6px;
+  background: var(--indigo-100);
+  color: var(--indigo-700);
+  stroke-width: 3.2;
+}
+
+.actions {
+  display: grid;
+  gap: 0.8rem;
+  justify-items: center;
+  margin-top: auto;
+  padding-top: 1.75rem;
+}
+
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.whatsapp svg {
+  width: 16px;
+  height: 16px;
+  color: #1fa855;
+}
+
+.whatsapp:hover {
+  color: var(--ink);
+}
+
+/* Option domaine & hébergement */
+.option {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+}
+
+.optionIcon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--gold-100);
+  color: var(--gold-700);
+}
+
+.optionIcon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.optionText h3 {
+  font-size: 1.125rem;
+}
+
+.optionText p {
+  margin-top: 0.35rem;
+  font-size: 0.975rem;
+  color: var(--muted);
+}
+
+.optionText strong {
+  color: var(--ink);
+}
+
+.note {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .option {
+    grid-template-columns: auto 1fr auto;
+    padding: 1.5rem 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* Noms sur une ou deux lignes : on réserve deux lignes pour aligner les prix. */
+  .name {
+    display: flex;
+    align-items: flex-end;
+    min-height: 2.3em;
+    line-height: 1.15;
+  }
+
+  .highlight {
+    margin-block: -0.75rem;
+    padding-block: 2.75rem 2.35rem;
+  }
+}

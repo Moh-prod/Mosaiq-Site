@@ -1,0 +1,126 @@
+.steps {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Mobile : frise verticale reliant les étapes */
+.step {
+  position: relative;
+  padding-left: 5rem;
+  min-height: 3.5rem;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 4.1rem;
+  bottom: -1.6rem;
+  left: 1.75rem;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, var(--indigo-200) 0 6px, transparent 6px 12px);
+}
+
+.step:last-child::before {
+  display: none;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 18px;
+  background: var(--indigo-700);
+  box-shadow: 0 12px 24px -14px rgb(37 47 133 / 0.8);
+  color: #fff;
+}
+
+.step:nth-child(2) .icon {
+  background: var(--orange-600);
+  box-shadow: 0 12px 24px -14px rgb(194 74 23 / 0.8);
+}
+
+.step:nth-child(3) .icon {
+  background: var(--gold-500);
+  box-shadow: 0 12px 24px -14px rgb(224 165 38 / 0.9);
+  color: var(--ink);
+}
+
+.step:nth-child(4) .icon {
+  background: var(--indigo-500);
+  box-shadow: 0 12px 24px -14px rgb(74 88 198 / 0.8);
+}
+
+.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.number {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-600);
+}
+
+.title {
+  margin-top: 0.3rem;
+  font-size: 1.25rem;
+}
+
+.text {
+  margin-top: 0.6rem;
+  font-size: 0.99rem;
+  color: var(--muted);
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding: 1.1rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface-muted);
+  font-weight: 600;
+  text-align: center;
+  color: var(--ink);
+}
+
+:global(.section--muted) .cta {
+  background: #fff;
+}
+
+/* Grand écran : frise horizontale */
+@media (min-width: 960px) {
+  .steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .step {
+    padding: 5rem 0 0;
+  }
+
+  .step::before {
+    top: 1.75rem;
+    right: -1.25rem;
+    bottom: auto;
+    left: 4.5rem;
+    width: auto;
+    height: 2px;
+    background: repeating-linear-gradient(to right, var(--indigo-200) 0 6px, transparent 6px 12px);
+  }
+
+  .cta {
+    width: fit-content;
+    margin-inline: auto;
+  }
+}

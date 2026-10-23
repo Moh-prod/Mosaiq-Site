@@ -1,0 +1,431 @@
+/* ----- Projet mis en avant ----- */
+
+.featured {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.visual {
+  position: relative;
+  isolation: isolate;
+  padding: 0 clamp(1.25rem, 7%, 3.5rem) clamp(2rem, 7%, 3.5rem) 0;
+}
+
+/* Grand aplat en arrière-plan, comme une tuile posée sous les écrans */
+.visual::before {
+  content: '';
+  position: absolute;
+  inset: 14% 0 0 16%;
+  z-index: -1;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--indigo-100), var(--orange-50));
+}
+
+.browser {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.4s var(--ease);
+}
+
+a.browser:hover {
+  transform: translateY(-4px);
+}
+
+.browserBar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 40px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-muted);
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f1a39b;
+}
+
+.dots i:nth-child(2) {
+  background: #f5cf7a;
+}
+
+.dots i:nth-child(3) {
+  background: #8fd3a8;
+}
+
+.address {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  max-width: 340px;
+  min-width: 0;
+  height: 26px;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.address svg {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  color: var(--success);
+}
+
+.screen {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--indigo-50);
+}
+
+.screen img {
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.8s var(--ease);
+}
+
+a.browser:hover .screen img {
+  transform: scale(1.03);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to top, rgb(11 15 48 / 0.72), rgb(11 15 48 / 0.15));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+a.browser:hover .overlay,
+a.browser:focus-visible .overlay {
+  opacity: 1;
+}
+
+.overlayBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.overlayBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.phone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: clamp(92px, 24%, 168px);
+  aspect-ratio: 390 / 844;
+  overflow: hidden;
+  border: 6px solid var(--indigo-950);
+  border-radius: 26px;
+  background: var(--indigo-950);
+  box-shadow: var(--shadow-lg);
+}
+
+.phone::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  z-index: 1;
+  width: 32%;
+  height: 7px;
+  border-radius: 8px;
+  background: var(--indigo-950);
+  transform: translateX(-50%);
+}
+
+.phone img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  justify-self: start;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--indigo-100);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--indigo-700);
+}
+
+.chip svg {
+  width: 14px;
+  height: 14px;
+}
+
+.chipMuted {
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+  color: var(--muted);
+}
+
+.projectTitle {
+  margin-top: 1rem;
+  font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.2rem);
+}
+
+.sector {
+  margin-top: 0.4rem;
+  font-weight: 650;
+  color: var(--orange-600);
+}
+
+.description {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.deliverablesTitle {
+  margin-top: 1.6rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.deliverables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.deliverables li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.deliverables svg {
+  width: 15px;
+  height: 15px;
+  color: var(--success);
+  stroke-width: 3;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* ----- Grille des autres projets ----- */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.cardMedia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--indigo-50);
+}
+
+.cardMedia img,
+.cardMedia video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgb(11 15 48 / 0.9), rgb(11 15 48 / 0.1) 75%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .cardOverlay,
+.card:focus-within .cardOverlay {
+  opacity: 1;
+}
+
+.cardOverlayLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+.cardOverlayLink svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cardBody {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.25rem 1.4rem 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+}
+
+.cardLink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.cardMeta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--orange-600);
+}
+
+.cardSummary {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ----- Cartes d'appel à l'action ----- */
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: clamp(1.6rem, 3vw, 2.25rem);
+  border: 2px dashed var(--indigo-200);
+  border-radius: var(--radius-lg);
+  background: var(--indigo-50);
+}
+
+.ctaCard h3 {
+  font-size: 1.3rem;
+}
+
+.ctaCard p {
+  color: var(--muted);
+}
+
+.ctaCard :global(.btn) {
+  margin-top: auto;
+}
+
+.ctaIcon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--indigo-700);
+  color: #fff;
+}
+
+.ctaIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ctaVideo {
+  border-color: var(--orange-200);
+  background: var(--orange-50);
+}
+
+.ctaVideo .ctaIcon {
+  background: var(--orange-500);
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .gridThree {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

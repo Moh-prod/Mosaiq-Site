@@ -1,0 +1,125 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: var(--indigo-950);
+  color: #b7bde0;
+  font-size: 0.9375rem;
+}
+
+/* Tuiles de mosaïque décoratives, en fondu */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(520px, 80%);
+  height: 360px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52'%3E%3Crect x='4' y='4' width='44' height='44' rx='10' fill='%237380df' fill-opacity='0.09'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(circle at 85% 0%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(circle at 85% 0%, #000 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.top {
+  position: relative;
+  display: grid;
+  gap: 2.5rem;
+  padding-block: clamp(3.5rem, 7vw, 5rem) 3rem;
+}
+
+.brand {
+  display: grid;
+  justify-items: start;
+  gap: 1.25rem;
+  max-width: 22rem;
+}
+
+.logoLink {
+  border-radius: 10px;
+}
+
+.brand p {
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.socials a {
+  font-weight: 600;
+  color: #fff;
+}
+
+.col h2 {
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.col ul {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.col a {
+  transition: color 0.2s;
+}
+
+.col a:hover {
+  color: #fff;
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.contactList svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
+  color: var(--orange-400);
+}
+
+.contactList a {
+  overflow-wrap: anywhere;
+}
+
+.hint {
+  display: block;
+  font-size: 0.8125rem;
+  color: #8990bf;
+}
+
+.bottom {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-block: 1.5rem calc(1.5rem + env(safe-area-inset-bottom));
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+  font-size: 0.875rem;
+  color: #8990bf;
+}
+
+@media (min-width: 720px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top {
+    grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+    gap: 3rem;
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Formulaires MOSAIQ</title>
+  </head>
+  <body>
+    <!--
+      Déclaration des formulaires pour Netlify Forms (fichier invisible pour les visiteurs).
+      Les noms des formulaires et des champs doivent correspondre exactement à ceux envoyés par le site.
+      Si vous ajoutez un champ dans un formulaire React, ajoutez-le aussi ici.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="email" type="email" />
+      <input name="phone" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="devis" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="devis" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="phone" />
+      <input name="email" type="email" />
+      <input name="services" />
+      <input name="offer" />
+      <input name="budget" />
+      <input name="deadline" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="assistant" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="assistant" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="contact" />
+      <textarea name="message"></textarea>
+      <input name="page" />
+      <textarea name="transcript"></textarea>
+    </form>
+  </body>
+</html>

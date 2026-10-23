@@ -1,0 +1,174 @@
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  --tone-bg: var(--indigo-100);
+  --tone-fg: var(--indigo-700);
+  --tone-solid: var(--indigo-700);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.6rem, 3vw, 2.1rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s var(--ease),
+    box-shadow 0.3s var(--ease),
+    border-color 0.3s;
+}
+
+.card:hover {
+  border-color: var(--tone-bg);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.indigo {
+  --tone-bg: var(--indigo-100);
+  --tone-fg: var(--indigo-700);
+  --tone-solid: var(--indigo-700);
+}
+
+.orange {
+  --tone-bg: var(--orange-100);
+  --tone-fg: var(--orange-700);
+  --tone-solid: var(--orange-500);
+}
+
+.gold {
+  --tone-bg: var(--gold-100);
+  --tone-fg: var(--gold-700);
+  --tone-solid: var(--gold-500);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: var(--tone-bg);
+  color: var(--tone-fg);
+}
+
+.icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Trois petites tuiles décoratives dans le coin */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 12px);
+  gap: 4px;
+}
+
+.tiles i {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background: var(--tone-bg);
+}
+
+.tiles i:first-child {
+  background: var(--tone-solid);
+}
+
+.tiles i:last-child {
+  grid-column: 2;
+}
+
+.title {
+  font-size: 1.375rem;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin-top: 0.75rem;
+  font-weight: 650;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.description {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.benefits {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+  font-size: 0.975rem;
+}
+
+.benefits li {
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.45;
+}
+
+.benefits svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  margin-top: 1px;
+  border-radius: 6px;
+  background: var(--tone-bg);
+  color: var(--tone-fg);
+  stroke-width: 3.2;
+}
+
+.footer {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.75rem;
+}
+
+.price {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.price strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  color: var(--tone-fg);
+}
+
+.link svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s var(--ease);
+}
+
+.link:hover svg {
+  transform: translateX(3px);
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

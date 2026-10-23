@@ -1,0 +1,160 @@
+.about {
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(40rem 30rem at 0% 0%, rgb(74 88 198 / 0.35), transparent 60%),
+    radial-gradient(36rem 26rem at 100% 100%, rgb(228 97 43 / 0.18), transparent 60%),
+    var(--indigo-950);
+}
+
+/* Tuiles de mosaïque en fondu */
+.about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect x='5' y='5' width='54' height='54' rx='12' fill='%23ffffff' fill-opacity='0.035'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 85% 20%, #000, transparent 70%);
+  mask-image: radial-gradient(ellipse 60% 70% at 85% 20%, #000, transparent 70%);
+}
+
+.inner {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.intro {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+}
+
+.title {
+  font-size: clamp(1.9rem, 1.25rem + 2.3vw, 2.9rem);
+  letter-spacing: -0.03em;
+}
+
+.intro p {
+  max-width: 34rem;
+  font-size: 1.0625rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.values {
+  display: grid;
+  gap: 1rem;
+}
+
+.value {
+  padding: 1.6rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: var(--radius-lg);
+  background: rgb(255 255 255 / 0.04);
+  transition:
+    background-color 0.3s,
+    border-color 0.3s,
+    transform 0.3s var(--ease);
+}
+
+.value:hover {
+  border-color: rgb(255 255 255 / 0.2);
+  background: rgb(255 255 255 / 0.07);
+  transform: translateY(-3px);
+}
+
+.value h3 {
+  margin-top: 1.1rem;
+  font-size: 1.15rem;
+}
+
+.value p {
+  margin-top: 0.5rem;
+  font-size: 0.975rem;
+  color: #b7bde0;
+}
+
+.valueIcon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
+  color: #fff;
+}
+
+.value:nth-child(2) .valueIcon {
+  background: linear-gradient(135deg, var(--indigo-400), var(--indigo-600));
+}
+
+.value:nth-child(3) .valueIcon {
+  background: linear-gradient(135deg, var(--gold-500), #c88a12);
+}
+
+.value:nth-child(4) .valueIcon {
+  background: linear-gradient(135deg, #8d98ec, var(--indigo-500));
+}
+
+.valueIcon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: var(--radius-lg);
+  background: rgb(255 255 255 / 0.1);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  padding: 1.5rem 1.25rem;
+  background: var(--indigo-950);
+  text-align: center;
+}
+
+.stat dd {
+  font-size: clamp(1.9rem, 1.4rem + 1.8vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.stat dt {
+  font-size: 0.9rem;
+  color: #a9b0db;
+}
+
+@media (min-width: 640px) {
+  .values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+}

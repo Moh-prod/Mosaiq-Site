@@ -1,0 +1,22 @@
+# Dépendances
+node_modules/
+
+# Builds Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Netlify
+.netlify/
+
+# Variables d'environnement locales
+.env*.local
+
+# Divers
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Notes personnelles (non publiées)
+promt claude.txt

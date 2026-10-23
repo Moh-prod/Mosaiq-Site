@@ -1,0 +1,55 @@
+.page {
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+  padding: calc(var(--header-h) + 3rem) 0 5rem;
+  background:
+    radial-gradient(40rem 26rem at 50% 0%, var(--indigo-50), transparent 70%),
+    #fff;
+  text-align: center;
+}
+
+.inner {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+  max-width: 40rem;
+}
+
+.mark {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 0.5rem;
+  overflow: visible;
+}
+
+/* La pièce orange « s'échappe » de la mosaïque */
+.mark rect:last-child {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: escape 3s var(--ease) infinite alternate;
+}
+
+@keyframes escape {
+  to {
+    transform: translate(10px, 12px) rotate(25deg);
+  }
+}
+
+.title {
+  font-size: clamp(2rem, 1.3rem + 2.6vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+.text {
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}

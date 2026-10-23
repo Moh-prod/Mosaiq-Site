@@ -1,0 +1,27 @@
+.heading {
+  display: grid;
+  gap: 1rem;
+  max-width: 46rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.center {
+  justify-items: center;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1.9rem, 1.25rem + 2.3vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  max-width: 40rem;
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  color: var(--muted);
+}
+
+:global(.section--dark) .subtitle {
+  color: #b7bde0;
+}
