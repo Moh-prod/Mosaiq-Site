@@ -178,8 +178,9 @@
 }
 
 .avatar svg {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: auto;
+  filter: drop-shadow(0 0 8px rgb(30 150 255 / 0.45));
 }
 
 .title {

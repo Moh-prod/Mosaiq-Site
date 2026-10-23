@@ -212,7 +212,7 @@ export default function ChatWidget() {
       >
         <header className={styles.head}>
           <span className={styles.avatar}>
-            <LogoMark variant="light" />
+            <LogoMark variant="plain" />
           </span>
           <div>
             <h2 id={titleId} className={styles.title}>

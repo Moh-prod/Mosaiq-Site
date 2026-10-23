@@ -68,6 +68,21 @@ Les couleurs, rayons et ombres se règlent au début de `src/styles/globals.css`
 
 Ajoutez vos liens dans `socials` (fichier `src/data/site.ts`) : ils apparaissent automatiquement dans le pied de page.
 
+### Logo
+
+Le logo (le « M » bleu cyan) est dessiné en vectoriel dans `src/components/Logo.tsx` : il reste net à toutes les
+tailles. Sur fond clair il s'affiche dans son badge bleu nuit, sur fond sombre il apparaît seul.
+
+Le dossier `brand/` contient le logo prêt à l'emploi pour vos réseaux, documents et cartes de visite :
+
+| Fichier | Usage |
+| --- | --- |
+| `mosaiq-logo.png` / `.svg` | Badge bleu nuit avec le M (fond transparent) |
+| `mosaiq-m.png` / `.svg` | Le M seul, sur fond transparent |
+| `mosaiq-photo-de-profil.png` | Photo de profil WhatsApp, Facebook, Instagram… (carré plein) |
+| `mosaiq-logo-horizontal.png` | Logo + nom MOSAIQ, pour fonds clairs (factures, devis, e-mails) |
+| `mosaiq-logo-horizontal-blanc.png` | Logo + nom MOSAIQ en blanc, pour fonds sombres |
+
 ---
 
 ## Formulaires (Netlify Forms)
@@ -140,6 +155,7 @@ Les images sont optimisées par le **Netlify Image CDN** (redimensionnement, AVI
 ## Structure
 
 ```
+brand/             fichiers du logo (PNG, SVG) pour vos réseaux et documents — non publiés sur le site
 public/            images, icônes, sitemap, robots.txt, __forms.html
 scripts/           aperçu local (preview.mjs) et captures d'écran (screenshot.mjs)
 src/data/          tout le contenu du site

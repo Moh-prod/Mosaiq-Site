@@ -17,22 +17,28 @@
 }
 
 .mark {
-  width: 84px;
-  height: 84px;
+  width: 96px;
+  height: 96px;
   margin-bottom: 0.5rem;
   overflow: visible;
+  filter: drop-shadow(0 18px 28px rgb(3 20 90 / 0.3));
 }
 
-/* La pièce orange « s'échappe » de la mosaïque */
-.mark rect:last-child {
+/* Une pièce du M « s'échappe » : il manque une pièce à la mosaïque */
+.mark [data-piece] {
   transform-box: fill-box;
-  transform-origin: center;
+  transform-origin: 50% 0;
   animation: escape 3s var(--ease) infinite alternate;
 }
 
 @keyframes escape {
+  0%,
+  20% {
+    transform: none;
+  }
+
   to {
-    transform: translate(10px, 12px) rotate(25deg);
+    transform: translate(150px, 120px) rotate(14deg);
   }
 }
 
