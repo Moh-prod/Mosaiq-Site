@@ -7,6 +7,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # Site 100 % statique : le runtime Next.js de Netlify (rendu serveur) n'est pas nécessaire.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # En-têtes de sécurité appliqués à toutes les pages
 [[headers]]
