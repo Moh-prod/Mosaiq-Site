@@ -8,25 +8,42 @@ type SeoProps = {
   /** Chemin de la page (ex. « /services/sites-web »), pour l'URL canonique. */
   path: string;
   image?: string;
+  keywords?: string[] | string;
   noindex?: boolean;
   jsonLd?: Record<string, unknown>[];
 };
 
 /** Balises SEO et réseaux sociaux (Open Graph, Twitter) d'une page. */
-export default function Seo({ title, description, path, image = '/og-image.png', noindex, jsonLd = [] }: SeoProps) {
+export default function Seo({ title, description, path, image = '/og-image.png', keywords, noindex, jsonLd = [] }: SeoProps) {
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
+  const keywordsContent = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {keywordsContent && <meta name="keywords" content={keywordsContent} />}
+      <meta
+        name="robots"
+        content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+      />
+      <meta name="author" content="MOSAIQ (Mosaic Company)" />
       <link rel="canonical" href={url} />
-      {noindex && <meta name="robots" content="noindex, follow" />}
 
+      {/* Balises géographiques régionales */}
+      <meta name="geo.region" content="ML" />
+      <meta name="geo.placename" content="Bamako" />
+      <meta name="geo.position" content="12.6392;-8.0029" />
+      <meta name="ICBM" content="12.6392, -8.0029" />
+
+      {/* Open Graph / Facebook / WhatsApp */}
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={site.name} />
+      <meta property="og:site_name" content="MOSAIQ (Mosaic Company)" />
       <meta property="og:locale" content="fr_FR" />
+      <meta property="og:locale:alternate" content="fr_ML" />
+      <meta property="og:locale:alternate" content="fr_CI" />
+      <meta property="og:locale:alternate" content="fr_SN" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
@@ -35,6 +52,7 @@ export default function Seo({ title, description, path, image = '/og-image.png',
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={`${site.name} — ${site.tagline}`} />
 
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

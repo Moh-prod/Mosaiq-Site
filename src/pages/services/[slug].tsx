@@ -66,6 +66,20 @@ export default function ServicePage({
         title={page.seoTitle}
         description={page.seoDescription}
         path={path}
+        keywords={[
+          service.title,
+          service.shortTitle,
+          'MOSAIQ',
+          'Mosaic Company',
+          'Mosaiq Company',
+          'Mosaic',
+          'Mali',
+          'Bamako',
+          "Côte d'Ivoire",
+          'Abidjan',
+          "Afrique de l'Ouest",
+          ...service.page.features.map((f) => f.title),
+        ]}
         jsonLd={[
           serviceJsonLd(service, path),
           breadcrumbJsonLd([

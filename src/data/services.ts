@@ -81,9 +81,9 @@ export const services: Service[] = [
     startingPrice: 39000,
     projectCategory: 'site-web',
     page: {
-      seoTitle: 'Création de site web vitrine au Mali dès 39 000 F CFA | MOSAIQ',
+      seoTitle: "Création de site web vitrine · Mali & Afrique de l'Ouest dès 39 000 F CFA | MOSAIQ (Mosaic Company)",
       seoDescription:
-        'Site vitrine professionnel, rapide et adapté au mobile pour votre entreprise au Mali. Design sur mesure, référencement Google, WhatsApp intégré. Dès 39 000 F CFA.',
+        "Site vitrine professionnel, rapide et adapté au mobile pour votre entreprise au Mali, en Côte d'Ivoire et en Afrique de l'Ouest. Design sur mesure, référencement Google, WhatsApp intégré. Dès 39 000 F CFA.",
       eyebrow: 'Création de sites web vitrines',
       h1: 'Un site web professionnel qui vous apporte des clients',
       intro:
@@ -193,9 +193,9 @@ export const services: Service[] = [
     linkLabel: 'Voir des échantillons de vidéos',
     projectCategory: 'motion-design',
     page: {
-      seoTitle: 'Vidéo motion-design & UGC au Mali pour vos réseaux sociaux | MOSAIQ',
+      seoTitle: "Vidéo motion-design & UGC · Mali, Côte d'Ivoire & Afrique de l'Ouest | MOSAIQ (Mosaic Company)",
       seoDescription:
-        "Vidéos promotionnelles en motion-design et vidéos UGC pour TikTok, Instagram, Facebook et WhatsApp. Captez l'attention et vendez plus. Devis gratuit.",
+        "Vidéos promotionnelles en motion-design et UGC pour TikTok, Instagram, Facebook et WhatsApp au Mali, Côte d'Ivoire et Afrique de l'Ouest. Captez l'attention et boostez vos ventes. MOSAIQ.",
       eyebrow: 'Vidéos motion-design & UGC',
       h1: "Des vidéos qui captent l'attention et font vendre",
       intro:
@@ -305,9 +305,9 @@ export const services: Service[] = [
     linkLabel: 'Découvrir nos chatbots IA',
     projectCategory: 'ia',
     page: {
-      seoTitle: 'Chatbot IA & automatisation pour entreprises au Mali | MOSAIQ',
+      seoTitle: "Chatbot IA & automatisation pour entreprises · Mali & Afrique de l'Ouest | MOSAIQ (Mosaic Company)",
       seoDescription:
-        'Intégrez un chatbot qui répond à vos clients 24h/24 et automatisez vos tâches répétitives (devis, rendez-vous, relances). Solutions sur mesure pour PME.',
+        "Intégrez un chatbot IA disponible 24h/24 et automatisez vos processus au Mali, en Côte d'Ivoire et en Afrique de l'Ouest. MOSAIQ (Mosaic Company).",
       eyebrow: "Intégration d'intelligence artificielle",
       h1: "L'intelligence artificielle au service de votre entreprise",
       intro:

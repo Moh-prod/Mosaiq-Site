@@ -39,7 +39,7 @@ export const faqs: FaqItem[] = [
     id: 'distance',
     question: 'Travaillez-vous en dehors du Mali ?',
     answer:
-      "Oui. Tout peut se faire à distance, par WhatsApp, appel ou e-mail. Nous avons par exemple réalisé le site de Cheikh Amy Immo & Services, au Sénégal.",
+      "Oui ! Tout se gère facilement à distance, par WhatsApp, appel ou visioconférence. Nous accompagnons des entreprises au Mali (Bamako, etc.), en Côte d'Ivoire (Abidjan), au Sénégal et partout en Afrique de l'Ouest comme à l'international.",
   },
   {
     id: 'propriete',

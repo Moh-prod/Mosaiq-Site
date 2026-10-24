@@ -23,7 +23,7 @@ export default function Hero({ featured }: { featured?: Project }) {
         <div className={styles.copy}>
           <p className={styles.badge}>
             <span className={styles.badgeDot} aria-hidden="true" />
-            Agence digitale basée au Mali
+            Agence digitale · Mali, Côte d&apos;Ivoire &amp; Afrique de l&apos;Ouest
           </p>
 
           <h1 id="hero-title" className={styles.title}>
@@ -34,8 +34,9 @@ export default function Hero({ featured }: { featured?: Project }) {
           </h1>
 
           <p className={styles.lead}>
-            Sites web professionnels, vidéos motion-design et assistants IA&nbsp;: MOSAIQ assemble toutes les pièces de
-            votre présence digitale, à des prix pensés pour les entreprises maliennes.
+            Sites web professionnels, vidéos motion-design et assistants IA&nbsp;: MOSAIQ (Mosaic Company) assemble
+            toutes les pièces de votre présence digitale, pour les entreprises au Mali, en Côte d&apos;Ivoire et en
+            Afrique de l&apos;Ouest.
           </p>
 
           <ul className={styles.services}>

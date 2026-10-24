@@ -26,7 +26,7 @@ const VALUES = [
   {
     icon: HeartHandshake,
     title: 'Proximité et réactivité',
-    text: 'Basés au Mali et joignables sur WhatsApp, nous comprenons vos clients et votre marché.',
+    text: "Basés au Mali et joignables sur WhatsApp, nous comprenons vos clients et votre marché, à Bamako, Abidjan ou partout en Afrique de l'Ouest.",
   },
 ];
 
@@ -52,8 +52,9 @@ export default function About() {
             des résultats concrets.
           </p>
           <p>
-            Notre mission&nbsp;: rendre le digital professionnel accessible à toutes les entreprises du Mali et d&apos;Afrique
-            de l&apos;Ouest, avec des solutions modernes, des prix justes et un accompagnement humain.
+            Notre mission&nbsp;: rendre le digital professionnel accessible à toutes les entreprises du Mali, de Côte
+            d&apos;Ivoire et d&apos;Afrique de l&apos;Ouest, avec des solutions modernes, des prix justes et un
+            accompagnement humain.
           </p>
           <div className={styles.actions}>
             <QuoteLink className="btn btn--primary">

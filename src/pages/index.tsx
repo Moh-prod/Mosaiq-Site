@@ -38,9 +38,29 @@ export default function Home({ services, projects, testimonials, offers, faqs, s
   return (
     <>
       <Seo
-        title="MOSAIQ — Sites web, vidéos motion-design & IA au Mali"
+        title="MOSAIQ (Mosaic Company) — Sites web, vidéos motion-design & IA | Mali & Afrique de l'Ouest"
         description={site.description}
         path="/"
+        keywords={[
+          'MOSAIQ',
+          'Mosaic',
+          'Mosaiq Company',
+          'Mosaic Company',
+          'Mosaik Company',
+          'Agence web Mali',
+          'Agence web Bamako',
+          'Création de site web Mali',
+          'Création site internet Mali',
+          'Agence web Côte d\'Ivoire',
+          'Création de site web Abidjan',
+          'Agence digitale Afrique de l\'Ouest',
+          'Vidéos Motion Design Mali',
+          'Vidéos UGC réseaux sociaux',
+          'Motion design Afrique',
+          'Chatbot IA Mali',
+          'Automatisation IA entreprise',
+          'Développement web Afrique',
+        ]}
         jsonLd={[organizationJsonLd(), websiteJsonLd(), faqJsonLd(faqs)]}
       />
       <Hero featured={featured} />
