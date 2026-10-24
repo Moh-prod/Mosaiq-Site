@@ -69,7 +69,7 @@ type IntentId =
 const intents: { id: IntentId; keywords: string[] }[] = [
   { id: 'tarifs', keywords: ['prix', 'tarif*', 'combien', 'cout*', 'cher', 'budget', 'forfait*', 'offre*', 'pack*', 'montant', 'fcfa', 'cfa', 'franc*', 'payer combien'] },
   { id: 'delais', keywords: ['delai*', 'combien de temps', 'quand', 'duree', 'livr*', 'rapide*', 'vite', 'semaine*', 'jours', 'temps', 'urgent'] },
-  { id: 'paiement', keywords: ['paiement*', 'payer', 'paye*', 'regle*', 'orange money', 'moov', 'wave', 'virement', 'espece*', 'acompte', 'avance', 'tranche*', 'facture*', 'mobile money'] },
+  { id: 'paiement', keywords: ['paiement*', 'payer', 'paye*', 'regle*', 'orange money', 'wave', 'carte bancaire', 'carte', 'cb', 'visa', 'crypto', 'bitcoin', 'usdt', 'acompte', 'avance', 'tranche*', 'facture*', 'mobile money'] },
   { id: 'maintenance', keywords: ['maintenance', 'mise a jour', 'mises a jour', 'support', 'assistance', 'apres la livraison', 'modifier', 'modification*', 'bug*', 'panne', 'suivi', 'sauvegarde*'] },
   { id: 'domaine', keywords: ['domaine', 'nom de domaine', 'hebergement', 'heberge*', 'hebergeur', 'com', 'adresse web', 'url', 'serveur'] },
   { id: 'devis', keywords: ['devis', 'estimation', 'sur mesure', 'personnalise*', 'commander', 'commande', 'demarrer', 'projet', 'mon projet', 'proposition', 'interesse*'] },

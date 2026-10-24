@@ -15,13 +15,13 @@ export const faqs: FaqItem[] = [
     id: 'delais',
     question: 'Quels sont les délais de réalisation ?',
     answer:
-      "Cela dépend du projet. À titre indicatif : quelques jours pour une vidéo, une à deux semaines pour un site vitrine, une fois vos contenus reçus (logo, textes, photos). Le délai exact est indiqué dans votre devis.",
+      "Cela dépend du projet. À titre indicatif : quelques jours pour une vidéo, une semaine pour un site vitrine, une fois vos contenus reçus (logo, textes, photos). Le délai exact est indiqué dans votre devis.",
   },
   {
     id: 'paiement',
     question: 'Comment se passent les paiements ?',
     answer:
-      'Simplement : un acompte au lancement du projet, puis le solde à la livraison. Vous pouvez régler par Orange Money, Moov Money, virement bancaire ou en espèces.',
+      'Simplement : un acompte au lancement du projet, puis le solde à la livraison. Vous pouvez régler par Orange Money, Wave, carte bancaire ou en crypto.',
   },
   {
     id: 'maintenance',
