@@ -28,7 +28,7 @@ export default function Seo({ title, description, path, image = '/og-image.png',
         name="robots"
         content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
       />
-      <meta name="author" content="MOSAIQ (Mosaic Company)" />
+      <meta name="author" content="MOSAIQ (Mosaiq Company)" />
       <link rel="canonical" href={url} />
 
       {/* Balises géographiques régionales */}
@@ -39,7 +39,7 @@ export default function Seo({ title, description, path, image = '/og-image.png',
 
       {/* Open Graph / Facebook / WhatsApp */}
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="MOSAIQ (Mosaic Company)" />
+      <meta property="og:site_name" content="MOSAIQ (Mosaiq Company)" />
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:locale:alternate" content="fr_ML" />
       <meta property="og:locale:alternate" content="fr_CI" />

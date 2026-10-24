@@ -8,7 +8,7 @@ export const site = {
   domain: 'mosaiq.company',
   tagline: 'Sites web, vidéos motion-design & intelligence artificielle',
   description:
-    "MOSAIQ (Mosaic Company), agence digitale basée au Mali et active en Côte d'Ivoire et en Afrique de l'Ouest : création de sites web vitrines dès 39 000 F CFA, vidéos motion-design/UGC, chatbots et automatisation par l'IA.",
+    "MOSAIQ (Mosaiq Company), agence digitale basée au Mali et active en Côte d'Ivoire et en Afrique de l'Ouest : création de sites web vitrines dès 39 000 F CFA, vidéos motion-design/UGC, chatbots et automatisation par l'IA.",
   country: 'Mali',
   countryCode: 'ML',
   email: 'mnituser007@gmail.com',

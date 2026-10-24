@@ -81,7 +81,7 @@ export const services: Service[] = [
     startingPrice: 39000,
     projectCategory: 'site-web',
     page: {
-      seoTitle: "Création de site web vitrine · Mali & Afrique de l'Ouest dès 39 000 F CFA | MOSAIQ (Mosaic Company)",
+      seoTitle: "Création de site web vitrine · Mali & Afrique de l'Ouest dès 39 000 F CFA | MOSAIQ (Mosaiq Company)",
       seoDescription:
         "Site vitrine professionnel, rapide et adapté au mobile pour votre entreprise au Mali, en Côte d'Ivoire et en Afrique de l'Ouest. Design sur mesure, référencement Google, WhatsApp intégré. Dès 39 000 F CFA.",
       eyebrow: 'Création de sites web vitrines',
@@ -193,7 +193,7 @@ export const services: Service[] = [
     linkLabel: 'Voir des échantillons de vidéos',
     projectCategory: 'motion-design',
     page: {
-      seoTitle: "Vidéo motion-design & UGC · Mali, Côte d'Ivoire & Afrique de l'Ouest | MOSAIQ (Mosaic Company)",
+      seoTitle: "Vidéo motion-design & UGC · Mali, Côte d'Ivoire & Afrique de l'Ouest | MOSAIQ (Mosaiq Company)",
       seoDescription:
         "Vidéos promotionnelles en motion-design et UGC pour TikTok, Instagram, Facebook et WhatsApp au Mali, Côte d'Ivoire et Afrique de l'Ouest. Captez l'attention et boostez vos ventes. MOSAIQ.",
       eyebrow: 'Vidéos motion-design & UGC',
@@ -305,9 +305,9 @@ export const services: Service[] = [
     linkLabel: 'Découvrir nos chatbots IA',
     projectCategory: 'ia',
     page: {
-      seoTitle: "Chatbot IA & automatisation pour entreprises · Mali & Afrique de l'Ouest | MOSAIQ (Mosaic Company)",
+      seoTitle: "Chatbot IA & automatisation pour entreprises · Mali & Afrique de l'Ouest | MOSAIQ (Mosaiq Company)",
       seoDescription:
-        "Intégrez un chatbot IA disponible 24h/24 et automatisez vos processus au Mali, en Côte d'Ivoire et en Afrique de l'Ouest. MOSAIQ (Mosaic Company).",
+        "Intégrez un chatbot IA disponible 24h/24 et automatisez vos processus au Mali, en Côte d'Ivoire et en Afrique de l'Ouest. MOSAIQ (Mosaiq Company).",
       eyebrow: "Intégration d'intelligence artificielle",
       h1: "L'intelligence artificielle au service de votre entreprise",
       intro:

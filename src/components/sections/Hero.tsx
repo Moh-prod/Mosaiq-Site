@@ -34,7 +34,7 @@ export default function Hero({ featured }: { featured?: Project }) {
           </h1>
 
           <p className={styles.lead}>
-            Sites web professionnels, vidéos motion-design et assistants IA&nbsp;: MOSAIQ (Mosaic Company) assemble
+            Sites web professionnels, vidéos motion-design et assistants IA&nbsp;: MOSAIQ (Mosaiq Company) assemble
             toutes les pièces de votre présence digitale, pour les entreprises au Mali, en Côte d&apos;Ivoire et en
             Afrique de l&apos;Ouest.
           </p>

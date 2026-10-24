@@ -38,14 +38,12 @@ export default function Home({ services, projects, testimonials, offers, faqs, s
   return (
     <>
       <Seo
-        title="MOSAIQ (Mosaic Company) — Sites web, vidéos motion-design & IA | Mali & Afrique de l'Ouest"
+        title="MOSAIQ (Mosaiq Company) — Sites web, vidéos motion-design & IA | Mali & Afrique de l'Ouest"
         description={site.description}
         path="/"
         keywords={[
           'MOSAIQ',
-          'Mosaic',
           'Mosaiq Company',
-          'Mosaic Company',
           'Mosaik Company',
           'Agence web Mali',
           'Agence web Bamako',
